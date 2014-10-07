@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="SpeechRecnogitionApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Speech recognition directive demo</title>
+</head>
+<body>
+	<div>	
+		<voice-capture lang="pt-BR" continuous="true" interimResults="true"></voice-capture>
+	</div>
+
+	<script src="angular.min.js"></script>
+	<script src="directive/speech-recognition.js"></script>
+	<script>
+		var app = angular.module("SpeechRecnogitionApp", 
+			["speechRecognition"]
+		);
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "angular-speech-recognition",
+  "description": "A AngularJS directive for speech recognition",
+  "version": "0.0.0",
+  "homepage": "https://github.com/angular/angular-speech-recognition",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x"
+  }
+}
