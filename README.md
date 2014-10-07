@@ -3,4 +3,7 @@ Angular Speech Recognition
 
 A reusable directive which implements the Webkit Speech Recognition API.
 
-### Usage:
+### Prerequisites:
+1. `bower install`
+
+Simples as that :)
