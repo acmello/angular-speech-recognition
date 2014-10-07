@@ -6,4 +6,4 @@ A reusable directive which implements the Webkit Speech Recognition API.
 ### Prerequisites:
 1. `bower install`
 
-Simples as that :)
+Simple as that :)
