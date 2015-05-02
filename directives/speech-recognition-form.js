@@ -58,20 +58,22 @@ function SpeechRecognitionForm(SpeechRecognitionFactory) {
 			var transcript = "";
 			for (var i = event.resultIndex; i < event.results.length; ++i) {
 		    	if (event.results[i].isFinal) {
-		    		transcript += event.results[i][0].transcript;
-		    		break;
+		    		transcript = event.results[i][0].transcript.trim();
+		    		
+		    		if(transcript === "next") {
+				    	console.log("calling next...")
+				    	currentEl = controller.getNext();
+				    	currentEl.focus();
+				    } else if (transcript === "previous") {
+				    	console.log("calling previous...")
+				    	currentEl = controller.getPrevious();
+				    	currentEl.focus(); 
+				    } else {
+				    	console.log("typing")
+				    	currentEl = controller.getCurrent();
+				    	currentEl.value = transcript;
+				    }
 		    	}
-		    }
-
-		    if(transcript === "next") {
-		    	currentEl = controller.getNext();
-		    	currentEl.focus();
-		    } else if (transcript === "previous") {
-		    	currentEl = controller.getPrevious();
-		    	currentEl.focus(); 
-		    } else {
-		    	currentEl = controller.getCurrent();
-		    	currentEl.value = transcript;
 		    }
 		});
 
