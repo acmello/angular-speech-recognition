@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='demoApp'>
+<head>
+	<meta charset="UTF-8">
+	<title>Speech recognition</title>
+</head>
+<body>
+	<am-speech-recognition-form>
+		<fieldset>
+			<label for="name">Name</label>
+			<input type="text" name="name">
+		</fieldset>
+		<fieldset>
+			<label for="name">description</label>
+			<input type="text" name="description">
+		</fieldset>
+		<button type="submit">Submit</button>
+	</am-speech-recognition-form>		
+
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="directives/speech-recognition-form.js"></script>
+	<script src="app.js"></script>
+	
+</body>
+</html>
